@@ -1,0 +1,19 @@
+<div class="layout-sidebar">
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" opened>
+      <ul>
+        <li *ngFor="let route of routes">{{route.path}}</li>
+      </ul>
+    </mat-sidenav>
+
+    <mat-sidenav-content measureScrollOffset="left">
+      <div class="layout-sidebar-header">
+        <button class="btn-toggle" mat-flat-button color="primary" (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+      </div>
+
+      <div class="container-fluid layout-sidebar-content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

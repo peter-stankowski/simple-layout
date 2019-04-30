@@ -1,0 +1,10 @@
+
+<button *ngFor="let layout of layouts" (click)="onToggleLayout(layout)">
+  {{layout.selector}}
+</button>
+{{layout.selector}}
+
+<div class='container-fluid'>
+  <layout-sidebar *ngIf="layout.selector == 'layout-sidebar'" [routes]="routes"></layout-sidebar>
+  <layout-topbar *ngIf="layout.selector == 'layout-topbar'"></layout-topbar>
+</div>
