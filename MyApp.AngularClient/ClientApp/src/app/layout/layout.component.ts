@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { Route } from '@angular/compiler/src/core';
 
-//service
+// service
 import { LayoutService } from '../service/layout.service';
+
+// models
 import { LayoutModel } from '../service/layout.service';
 
 // routes
-import { layoutRoutes } from './layout.routes';
+import { appRoutes } from '../app.routes';
 
 @Component({
     selector: 'app-layout',
@@ -27,7 +29,7 @@ export class LayoutComponent {
   ngOnInit() {
     this.layoutService.getLayout().subscribe(x => {
       this.layouts = x;
-      this.routes = layoutRoutes;
+      this.routes = appRoutes;
     });
   };
 

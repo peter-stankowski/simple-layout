@@ -1,7 +1,6 @@
 import { Component, NgModule, Input } from '@angular/core';
-
-import { layoutRoutes } from '../layout.routes';
 import { Route } from '@angular/compiler/src/core';
+
 
 @Component({
   selector: 'layout-sidebar',

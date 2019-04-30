@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Route } from '@angular/compiler/src/core';
+
 
 @Component({
     selector: 'layout-topbar',
@@ -7,6 +9,8 @@ import { Component } from '@angular/core';
 })
 /** topbar component*/
 export class TopbarComponent {
+    @Input() routes: Route[];
+
     /** topbar ctor */
     constructor() {
 

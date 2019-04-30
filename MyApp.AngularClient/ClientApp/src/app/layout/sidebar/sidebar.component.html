@@ -2,7 +2,7 @@
   <mat-sidenav-container>
     <mat-sidenav #sidenav mode="side" opened>
       <ul>
-        <li *ngFor="let route of routes">{{route.path}}</li>
+        <li *ngFor="let route of routes">{{route.data.displayText}}</li>
       </ul>
     </mat-sidenav>
 

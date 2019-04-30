@@ -6,5 +6,5 @@
 
 <div class='container-fluid'>
   <layout-sidebar *ngIf="layout.selector == 'layout-sidebar'" [routes]="routes"></layout-sidebar>
-  <layout-topbar *ngIf="layout.selector == 'layout-topbar'"></layout-topbar>
+  <layout-topbar *ngIf="layout.selector == 'layout-topbar'" [routes]="routes"></layout-topbar>
 </div>
