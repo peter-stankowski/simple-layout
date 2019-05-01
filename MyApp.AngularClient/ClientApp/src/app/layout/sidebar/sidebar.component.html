@@ -1,9 +1,17 @@
 <div class="layout-sidebar">
   <mat-sidenav-container>
     <mat-sidenav #sidenav mode="side" opened>
-      <ul>
-        <li *ngFor="let route of routes">{{route.data.displayText}}</li>
-      </ul>
+      <div *ngFor="let route of routes">
+        <button mat-button routerLink="/{{route.path}}" [matMenuTriggerFor]="subMenu.childMenu">{{route.data.displayText}}</button>
+
+        <navbar-item #subMenu [items]="route.children"></navbar-item>
+
+        <!--<mat-menu #topbarMenu="matMenu" yPosition="below">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>-->
+
+      </div>
     </mat-sidenav>
 
     <mat-sidenav-content measureScrollOffset="left">

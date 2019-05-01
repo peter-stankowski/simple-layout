@@ -3,11 +3,8 @@
     <mat-toolbar-row>
 
       <div *ngFor="let route of routes">
-        <button mat-button routerLink="/{{route.path}}" [matMenuTriggerFor]="topbarMenu">{{route.data.displayText}}</button>
-        <mat-menu #topbarMenu="matMenu" yPosition="below">
-          <button mat-menu-item>Item 1</button>
-          <button mat-menu-item>Item 2</button>
-        </mat-menu>
+        <button mat-button routerLink="/{{route.path}}" [matMenuTriggerFor]="subMenu.childMenu">{{route.data.displayText}}</button>
+        <navbar-item #subMenu [items]="route.children"></navbar-item>
 
       </div>
     </mat-toolbar-row>

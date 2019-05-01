@@ -7,7 +7,7 @@ import { LayoutComponent } from './layout.component';
 import { HomeComponent } from '../home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopbarComponent } from './topbar/topbar.component';
-
+import { NavbarItemComponent } from './shared/navbar-item.component';
 
 @NgModule({
   imports: [
@@ -15,7 +15,7 @@ import { TopbarComponent } from './topbar/topbar.component';
     MaterialModules,
     RouterModule
   ],
-  declarations: [LayoutComponent, SidebarComponent, TopbarComponent, HomeComponent],
+  declarations: [LayoutComponent, SidebarComponent, TopbarComponent, HomeComponent, NavbarItemComponent],
   exports: [
     RouterModule,
     LayoutComponent
