@@ -2,15 +2,15 @@
   <span *ngFor="let child of items">
     <span *ngIf="child.children && child.children.length > 0">
       <button mat-menu-item color="primary" [matMenuTriggerFor]="menu.childMenu">
-        <!--<mat-icon>{{ child.iconName }}</mat-icon>-->
-        <span>{{ child.data.displayText }}</span>
+        <mat-icon *ngIf="child.displayIcon">{{child.displayIcon}}</mat-icon>
+        <span>{{ child.displayText }}</span>
       </button>
       <navbar-item #menu [items]="child.children"></navbar-item>
     </span>
     <span *ngIf="!child.children || child.children.length === 0">
       <button mat-menu-item (click)="child.onClick();">
-        <!--<mat-icon>{{ child.iconName }}</mat-icon>-->
-        <span>{{ child.data.displayText }}</span>
+        <mat-icon *ngIf="child.displayIcon">{{child.displayIcon}}</mat-icon>
+        <span>{{ child.displayText }}</span>
       </button>
     </span>
   </span>

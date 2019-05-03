@@ -2,7 +2,6 @@ import { Routes, Route } from "@angular/router";
 
 import { HomeComponent } from './home/home.component';
 
-
 export const appRoutes: Routes = [
   {
     path: '',
@@ -65,3 +64,45 @@ export const appRoutes: Routes = [
     ]
   },
 ];
+
+export const appNav: any = [
+  {
+    path: '',
+    displayText: 'Home',
+    displayIcon: 'home'
+  },
+  {
+    path: 'about',
+    displayText: 'About'
+  },
+  {
+    path: 'contact',
+    displayText: 'Contact'
+  },
+  {
+    path: 'settings',
+    displayText: 'Settings',
+    children: [
+      {
+        path: 'user',
+        displayText: 'User Settings'
+      },
+      {
+        path: 'customer',
+        displayText: 'Customer Settings',
+        displayIcon: 'settings',
+        children: [
+          {
+            path: 'public',
+            displayText: 'Public Customer Settings'
+          },
+          {
+            path: 'private',
+            displayText: 'Private Customer Settings'
+          }
+        ]
+      }
+    ]
+  },
+];
+

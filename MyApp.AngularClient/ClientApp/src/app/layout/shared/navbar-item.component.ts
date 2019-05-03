@@ -9,7 +9,7 @@ import { Route } from "@angular/router";
 /** topbar component*/
 export class NavbarItemComponent {
   @Input('items')
-  public items: Route[];
+  public items: any[];
 
   @ViewChild('childMenu')
   public childMenu;

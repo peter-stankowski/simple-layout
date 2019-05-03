@@ -2,9 +2,11 @@
   <mat-toolbar color="primary">
     <mat-toolbar-row>
 
-      <div *ngFor="let route of routes">
-        <button mat-button routerLink="/{{route.path}}" [matMenuTriggerFor]="subMenu.childMenu">{{route.data.displayText}}</button>
-        <navbar-item #subMenu [items]="route.children"></navbar-item>
+      <div *ngFor="let item of items">
+        <button mat-button routerLink="/{{item.path}}" [matMenuTriggerFor]="subMenu.childMenu">
+          <mat-icon *ngIf="item.displayIcon">{{item.displayIcon}}</mat-icon> {{item.displayText}}
+        </button>
+        <navbar-item #subMenu [items]="item.children"></navbar-item>
 
       </div>
     </mat-toolbar-row>

@@ -10,7 +10,7 @@ import { Route } from '@angular/compiler/src/core';
 })
 /** sidebar component*/
 export class SidebarComponent {
-  @Input() routes: Route[];
+  @Input() items: any[];
 
   /** sidebar ctor */
   constructor() {
@@ -18,6 +18,12 @@ export class SidebarComponent {
   }
 
   ngOnInit() {
-    console.log(this.routes);
+    console.log(this.items);
   }
+
+  toggleSidenav(e: any, sidenav: any) {
+    var t = sidenav.toggle();
+    console.log(t);
+  }
+
 }

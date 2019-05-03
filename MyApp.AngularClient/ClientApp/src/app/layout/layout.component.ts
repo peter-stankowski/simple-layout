@@ -8,7 +8,7 @@ import { LayoutService } from '../service/layout.service';
 import { LayoutModel } from '../service/layout.service';
 
 // routes
-import { appRoutes } from '../app.routes';
+import { appNav } from '../app.routes';
 
 @Component({
     selector: 'app-layout',
@@ -24,12 +24,12 @@ export class LayoutComponent {
 
   layouts: LayoutModel[] = [];
   layout: any = {};
-  routes: Route[]
+  items: any[]
 
   ngOnInit() {
     this.layoutService.getLayout().subscribe(x => {
       this.layouts = x;
-      this.routes = appRoutes;
+      this.items = appNav;
     });
   };
 

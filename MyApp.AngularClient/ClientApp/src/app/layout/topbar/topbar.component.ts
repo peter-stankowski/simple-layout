@@ -9,7 +9,7 @@ import { Route } from '@angular/compiler/src/core';
 })
 /** topbar component*/
 export class TopbarComponent {
-    @Input() routes: Route[];
+    @Input() items: any[];
 
     /** topbar ctor */
     constructor() {

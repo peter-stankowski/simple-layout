@@ -1,22 +1,18 @@
 <div class="layout-sidebar">
   <mat-sidenav-container>
     <mat-sidenav #sidenav mode="side" opened>
-      <div *ngFor="let route of routes">
-        <button mat-button routerLink="/{{route.path}}" [matMenuTriggerFor]="subMenu.childMenu">{{route.data.displayText}}</button>
+      <div *ngFor="let item of items">
+        <button mat-button routerLink="/{{item.path}}" [matMenuTriggerFor]="subMenu.childMenu">
+          <mat-icon *ngIf="item.displayIcon">{{item.displayIcon}}</mat-icon> {{item.displayText}}
+        </button>
 
-        <navbar-item #subMenu [items]="route.children"></navbar-item>
-
-        <!--<mat-menu #topbarMenu="matMenu" yPosition="below">
-          <button mat-menu-item>Item 1</button>
-          <button mat-menu-item>Item 2</button>
-        </mat-menu>-->
-
+        <navbar-item #subMenu [items]="item.children"></navbar-item>
       </div>
     </mat-sidenav>
 
     <mat-sidenav-content measureScrollOffset="left">
       <div class="layout-sidebar-header">
-        <button class="btn-toggle" mat-flat-button color="primary" (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+        <button class="btn-toggle" mat-flat-button color="primary" (click)="toggleSidenav($event, sidenav)"><mat-icon>menu</mat-icon></button>
       </div>
 
       <div class="container-fluid layout-sidebar-content">
