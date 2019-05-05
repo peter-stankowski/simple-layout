@@ -7,10 +7,11 @@ namespace MyApp.Service.Layout
 {
     public class LayoutService : ILayoutService
     {
-        public List<NavItemViewModel> GetNavItems()
+        List<NavItemViewModel> ILayoutService.GetNavItems()
         {
             return SeedNavItems();
         }
+
 
         private List<NavItemViewModel> SeedNavItems()
         {
@@ -19,5 +20,6 @@ namespace MyApp.Service.Layout
 
             return model.NavItems;
         }
+               
     }
 }

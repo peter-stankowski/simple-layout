@@ -26,12 +26,19 @@ namespace MyApp.Model.Layout
             NavItems = new List<NavItemViewModel>()
             {
                 new NavItemViewModel(){ NavItemID = 1, DisplayName="Home", IconName = "home"},
-                new NavItemViewModel(){ NavItemID = 2, DisplayName="About", IconName = "home"},
-                new NavItemViewModel(){ NavItemID = 3, DisplayName="Contact", IconName = "home"},
-                new NavItemViewModel(){ NavItemID = 4, DisplayName="Settings", IconName = "home",
+                new NavItemViewModel(){ NavItemID = 2, DisplayName="About", IconName = "face"},
+                new NavItemViewModel(){ NavItemID = 3, DisplayName="Contact", IconName = "gavel"},
+                new NavItemViewModel(){ NavItemID = 4, DisplayName="Settings", IconName = "settings_input_composite",
                  NavItems = new List<NavItemViewModel>(){
-                    new NavItemViewModel(){ NavItemID = 41, DisplayName="Setting 1", IconName = "home"},
-                    new NavItemViewModel(){ NavItemID = 42, DisplayName="Setting 2", IconName = "home" }
+                    new NavItemViewModel(){ NavItemID = 41, DisplayName="Setting 1", IconName = "settings" },
+                    new NavItemViewModel(){ NavItemID = 42, DisplayName="Setting 2", IconName = "settings_bluetooth",
+                    NavItems  = new List<NavItemViewModel>(){
+                        new NavItemViewModel(){ NavItemID = 421, DisplayName="Setting 21", IconName = "speaker_notes" },
+                        new NavItemViewModel(){ NavItemID = 422, DisplayName="Setting 22", IconName = "speaker_notes_off",
+                        NavItems = new List<NavItemViewModel>(){
+                            new NavItemViewModel(){ NavItemID = 4221, DisplayName="Setting 233", IconName = "system_update_alt" }
+                        } }
+                    } }
                  } }
 
             };
