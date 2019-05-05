@@ -33,6 +33,9 @@ namespace MyApp.API
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
 
+            services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()));
+
+            // services
             services.AddScoped<ILayoutService, LayoutService>();
 
         }
@@ -52,6 +55,8 @@ namespace MyApp.API
             });
 
             app.UseMvc();
+            app.UseCors("AllowAll");
+
         }
     }
 }
