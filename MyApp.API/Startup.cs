@@ -11,6 +11,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 
+using MyApp.Service.Layout;
+
 namespace MyApp.API
 {
     public class Startup
@@ -30,6 +32,8 @@ namespace MyApp.API
             {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
+
+            services.AddScoped<ILayoutService, LayoutService>();
 
         }
 
