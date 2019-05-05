@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 import { Observable, of } from 'rxjs';
+import { environment } from '../../environments/environment';
+
 
 @Injectable({
   providedIn: 'root',
 })
 export class LayoutService {
-    constructor() {
+    constructor(private _http: HttpClient) {
 
   }
 
@@ -18,6 +22,13 @@ export class LayoutService {
     return of(data);
   }
 
+  //todo - api urls will be global environment variables
+  getNavItems = () => {
+    return this._http.get(
+      `${environment.apiUrl}/Layout/api/Layout/GetNavItems`
+    )
+  }
+  //Access-Control-Allow-Origin
 }
 
 export class LayoutModel {
