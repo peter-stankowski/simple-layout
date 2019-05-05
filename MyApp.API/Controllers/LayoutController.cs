@@ -17,14 +17,11 @@ namespace MyApp.API.Controllers
     {
 
         private ILayoutService service;
-        public LayoutController()
+        
+        public LayoutController(ILayoutService _service)
         {
-            service = new LayoutService();
+            service = _service;
         }
-        //public LayoutController(ILayoutService _service)
-        //{
-        //    service = _service;
-        //}
 
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
