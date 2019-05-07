@@ -9,5 +9,7 @@ namespace MyApp.Service.Layout
     public interface ILayoutService
     {
         List<NavItemViewModel> GetNavItems();
+        List<LayoutComponentViewModel> GetLayouts();
+        LayoutComponentViewModel GetLayout(LayoutTemplates layoutTemplate);
     }
 }

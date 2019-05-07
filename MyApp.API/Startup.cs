@@ -12,6 +12,8 @@ using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 
 using MyApp.Service.Layout;
+using System.Reflection;
+using System.IO;
 
 namespace MyApp.API
 {
@@ -30,7 +32,20 @@ namespace MyApp.API
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+                c.SwaggerDoc("v1", new Info {
+                    Title = "My API",
+                    Version = "v1",
+                    Contact = new Contact
+                    {
+                        Name = "Peter Stankowski",
+                        Email = "summon2008@yahoo.com"
+                    },
+                });
+
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
 
             services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()));
