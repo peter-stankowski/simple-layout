@@ -1,16 +1,16 @@
 <mat-menu #childMenu="matMenu" [overlapTrigger]="false">
   <span *ngFor="let child of items">
-    <span *ngIf="child.children && child.children.length > 0">
+    <span *ngIf="child.navItems && child.navItems.length > 0">
       <button mat-menu-item color="primary" [matMenuTriggerFor]="menu.childMenu">
-        <mat-icon *ngIf="child.displayIcon">{{child.displayIcon}}</mat-icon>
-        <span>{{ child.displayText }}</span>
+        <mat-icon *ngIf="child.iconName">{{child.iconName}}</mat-icon>
+        <span>{{ child.displayName }}</span>
       </button>
-      <navbar-item #menu [items]="child.children"></navbar-item>
+      <navbar-item #menu [items]="child.navItems"></navbar-item>
     </span>
-    <span *ngIf="!child.children || child.children.length === 0">
+    <span *ngIf="!child.navItems || child.navItems.length === 0">
       <button mat-menu-item (click)="child.onClick();">
-        <mat-icon *ngIf="child.displayIcon">{{child.displayIcon}}</mat-icon>
-        <span>{{ child.displayText }}</span>
+        <mat-icon *ngIf="child.iconName">{{child.iconName}}</mat-icon>
+        <span>{{ child.displayName }}</span>
       </button>
     </span>
   </span>

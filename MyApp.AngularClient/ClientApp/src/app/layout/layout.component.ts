@@ -6,6 +6,7 @@ import { LayoutService } from '../service/layout.service';
 
 // models
 import { LayoutModel } from '../service/layout.service';
+import { NavItem } from '../interfaces/nav-item';
 
 // routes
 import { appNav } from '../app.routes';
@@ -26,10 +27,18 @@ export class LayoutComponent {
   layout: any = {};
   items: any[]
 
+  //temp var
+  newItems: any;
   ngOnInit() {
+
+    this.layoutService.getNavItems()
+      .subscribe((navItems: NavItem[]) => {        
+        this.items = navItems;
+      })
+
     this.layoutService.getLayout().subscribe(x => {
       this.layouts = x;
-      this.items = appNav;
+      //this.items = appNav;     
     });
   };
 
