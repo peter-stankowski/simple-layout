@@ -30,7 +30,7 @@ namespace MyApp.API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Route("api/Layout/EnumLayoutTemplates")]
+        [Route("EnumLayoutTemplates")]
         public ActionResult<dynamic> _EnumLayoutTemplates()
         {
             var dict = Enum<LayoutTemplates>.AsDictionary;
@@ -42,7 +42,7 @@ namespace MyApp.API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Route("api/Layout/EnumLayoutThemes")]
+        [Route("EnumLayoutThemes")]
         public ActionResult<dynamic> _EnumLayoutThemes()
         {
             var dict = Enum<LayoutThemes>.AsDictionary;
@@ -55,7 +55,7 @@ namespace MyApp.API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Route("api/Layout/GetLayout")]
+        [Route("GetLayout")]
         public ActionResult<LayoutComponentViewModel> GetLayout(LayoutTemplates layoutTemplate)
         {
             return Ok(service.GetLayout(layoutTemplate));
@@ -66,7 +66,7 @@ namespace MyApp.API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Route("api/Layout/GetLayouts")]
+        [Route("GetLayouts")]
         public ActionResult<LayoutComponentViewModel> GetLayouts()
         {
             return Ok(service.GetLayouts());
@@ -77,7 +77,7 @@ namespace MyApp.API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Route("api/Layout/GetNavItems")]
+        [Route("GetNavItems")]
         public ActionResult<NavItemViewModel> GetNavItems()
         {
             return Ok(service.GetNavItems());

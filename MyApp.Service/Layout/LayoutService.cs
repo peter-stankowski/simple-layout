@@ -32,6 +32,11 @@ namespace MyApp.Service.Layout
             return this.getLayouts();
         }
 
+        public LayoutComponentViewModel GetLayout(LayoutTemplates layoutTemplate)
+        {
+            return this.getLayouts().Find(x => x.LayoutTemplate == layoutTemplate);
+        }
+
         private List<NavItemViewModel> SeedNavItems()
         {
             var model = new NavItemViewModel();
@@ -40,9 +45,6 @@ namespace MyApp.Service.Layout
             return model.NavItems;
         }
 
-        public LayoutComponentViewModel GetLayout(LayoutTemplates layoutTemplate)
-        {
-            return this.getLayouts().Find(x => x.LayoutTemplate == layoutTemplate);
-        }
+        
     }
 }

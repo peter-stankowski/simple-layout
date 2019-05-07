@@ -6,10 +6,11 @@ import { LayoutService } from '../service/layout.service';
 
 // models
 import { LayoutModel } from '../service/layout.service';
-import { NavItem } from '../interfaces/nav-item';
+import { NavItem } from '../shared/models/navbar.model';
 
 // routes
 import { appNav } from '../app.routes';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-layout',
@@ -25,15 +26,15 @@ export class LayoutComponent {
 
   layouts: LayoutModel[] = [];
   layout: any = {};
-  items: any[]
+  items: any[];
 
   //temp var
-  newItems: any;
   ngOnInit() {
 
     this.layoutService.getNavItems()
       .subscribe((navItems: NavItem[]) => {        
         this.items = navItems;
+        console.log(navItems);
       })
 
     this.layoutService.getLayout().subscribe(x => {

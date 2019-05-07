@@ -4,12 +4,15 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { environment } from '../../environments/environment';
 
+// generic service
+import { ApiService } from "../shared/service/apiService";
+
 
 @Injectable({
   providedIn: 'root',
 })
 export class LayoutService {
-    constructor(private _http: HttpClient) {
+  constructor(private _http: HttpClient, private _apiService: ApiService) {
 
   }
 
@@ -24,9 +27,10 @@ export class LayoutService {
 
   //todo - api urls will be global environment variables
   getNavItems = () => {
-    return this._http.get(
-      `${environment.apiUrl}/Layout/api/Layout/GetNavItems`
-    )
+    return this._apiService.get("Layout", "GetNavItems", null);
+    //return this._http.get(
+    //  `${environment.apiUrl}/Layout/api/Layout/GetNavItems`
+    //)
   }
   //Access-Control-Allow-Origin
 }
