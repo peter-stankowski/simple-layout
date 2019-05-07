@@ -1,13 +1,13 @@
 
 <button *ngFor="let layout of layouts" (click)="onToggleLayout(layout)">
-  {{layout.selector}}
+  Template {{layout.layoutTemplate}}
 </button>
-{{layout.selector}}
+{{layout.layoutTemplate}}
 <hr />
 
 <div class='container-fluid'>
-  <layout-sidebar *ngIf="layout.selector == 'layout-sidebar'" [items]="items"></layout-sidebar>
-  <layout-topbar *ngIf="layout.selector == 'layout-topbar'" [items]="items"></layout-topbar>
+  <layout-topbar *ngIf="layout.layoutTemplate == '0'" [items]="layout.navItems"></layout-topbar>
+  <layout-sidebar *ngIf="layout.layoutTemplate == '1'" [items]="layout.navItems"></layout-sidebar>
 </div>
 
-<p>Nav layout from api: {{items}}</p>
+<p>Nav layout from api: {{layout | json}}</p>

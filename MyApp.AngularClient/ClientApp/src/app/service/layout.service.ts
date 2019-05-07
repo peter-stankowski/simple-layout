@@ -32,7 +32,11 @@ export class LayoutService {
     //  `${environment.apiUrl}/Layout/api/Layout/GetNavItems`
     //)
   }
-  //Access-Control-Allow-Origin
+
+  getLayouts = () => {
+    return this._apiService.get("Layout", "GetLayouts", null);
+  }
+
 }
 
 export class LayoutModel {

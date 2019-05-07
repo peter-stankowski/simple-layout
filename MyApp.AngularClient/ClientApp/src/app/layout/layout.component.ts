@@ -5,8 +5,8 @@ import { Route } from '@angular/compiler/src/core';
 import { LayoutService } from '../service/layout.service';
 
 // models
-import { LayoutModel } from '../service/layout.service';
-import { NavItem } from '../shared/models/navbar.model';
+import { PageLayout } from './models/layout.model';
+import { NavItem } from './models/navbar.model';
 
 // routes
 import { appNav } from '../app.routes';
@@ -24,20 +24,20 @@ export class LayoutComponent {
 
   }
 
-  layouts: LayoutModel[] = [];
-  layout: any = {};
+  layouts: PageLayout[] = [];
+  layout: PageLayout = new PageLayout();
   items: any[];
 
   //temp var
   ngOnInit() {
 
-    this.layoutService.getNavItems()
-      .subscribe((navItems: NavItem[]) => {        
-        this.items = navItems;
-        console.log(navItems);
-      })
+    //this.layoutService.getNavItems()
+    //  .subscribe((navItems: NavItem[]) => {        
+    //    this.items = navItems;
+    //    console.log(navItems);
+    //  })
 
-    this.layoutService.getLayout().subscribe(x => {
+    this.layoutService.getLayouts().subscribe(x => {
       this.layouts = x;
       //this.items = appNav;     
     });
