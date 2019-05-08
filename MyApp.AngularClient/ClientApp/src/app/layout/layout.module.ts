@@ -9,6 +9,7 @@ import { HomeComponent } from '../home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { NavbarItemComponent } from './shared/navbar-item.component';
+import { ConfigComponent } from './config/config.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { NavbarItemComponent } from './shared/navbar-item.component';
     SidebarComponent,
     TopbarComponent,
     HomeComponent,
-    NavbarItemComponent
+    NavbarItemComponent,
+    ConfigComponent
   ],
   exports: [
     RouterModule,

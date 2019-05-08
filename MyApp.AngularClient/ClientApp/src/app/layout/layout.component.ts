@@ -1,16 +1,10 @@
-import { Component } from '@angular/core';
-import { Route } from '@angular/compiler/src/core';
+import { Component, Input } from '@angular/core';
 
 // service
-import { LayoutService } from '../service/layout.service';
+import { LayoutService } from './layout.service';
 
 // models
-import { PageLayout } from './models/layout.model';
-import { NavItem } from './models/navbar.model';
-
-// routes
-import { appNav } from '../app.routes';
-import { Observable } from 'rxjs';
+import { PageLayout, LayoutTemplates, LayoutThemes } from './models/layout.model';
 
 @Component({
     selector: 'app-layout',
@@ -19,31 +13,20 @@ import { Observable } from 'rxjs';
 })
 /** topbar component*/
 export class LayoutComponent {
-    /** topbar ctor */
+  layout: PageLayout = new PageLayout();
+  layoutTemplates = LayoutTemplates;
+  layoutThemes = LayoutThemes
+   
   constructor(private layoutService: LayoutService) {
 
   }
-
-  layouts: PageLayout[] = [];
-  layout: PageLayout = new PageLayout();
-  items: any[];
-
-  //temp var
+ 
   ngOnInit() {
-
-    //this.layoutService.getNavItems()
-    //  .subscribe((navItems: NavItem[]) => {        
-    //    this.items = navItems;
-    //    console.log(navItems);
-    //  })
-
-    this.layoutService.getLayouts().subscribe(x => {
-      this.layouts = x;
-      //this.items = appNav;     
-    });
+    
   };
 
-  onToggleLayout(layout) {
-    this.layout = layout;
+  onLayoutChange($event: PageLayout) {
+    this.layout = $event;
   }
+
 }

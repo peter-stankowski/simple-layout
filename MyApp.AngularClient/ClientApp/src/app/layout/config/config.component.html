@@ -1,0 +1,6 @@
+<div class="config-component" cdkDrag>
+  <h2>Select Layout</h2>
+  <button *ngFor="let layout of layouts" (click)="onToggleLayout(layout)">
+    Template {{layout.layoutTemplate}}
+  </button>
+</div>

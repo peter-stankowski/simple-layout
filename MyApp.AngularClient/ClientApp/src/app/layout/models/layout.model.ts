@@ -1,19 +1,23 @@
 
 import { NavItem } from "./navbar.model";
 
-enum LayoutTemplates {
+export enum LayoutTemplates {
   Topbar = 0,
   Sidebar = 1
 }
-enum LayoutThemes {
+export enum LayoutThemes {
   Default = 0
 }
 
 export class PageLayout {
+  constructor() {
+    this.LayoutTemplate = LayoutTemplates.Topbar;
+    this.LayoutTheme = LayoutThemes.Default;
+  }
   PageLayoutID: number;
 
   LayoutTemplate: LayoutTemplates;
   LayoutTheme: LayoutThemes;
-  NavItems: NavItem;
+  NavItems: NavItem[];
 
 }
