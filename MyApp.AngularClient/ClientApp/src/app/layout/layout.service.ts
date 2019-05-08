@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { Observable, of } from 'rxjs';
 
@@ -16,7 +16,15 @@ export class LayoutService {
   }
 
   getLayouts = () => {
-    return this._apiService.get("Layout", "GetLayouts", null);
+    var data = this._apiService.get("Layout", "GetLayouts", null);
+
+    return data;
+  }
+
+  getLayout = (id) => {
+    var data = this._apiService.get("Layout", "GetLayout", { layoutTemplate: id});
+
+    return data;
   }
 
 }

@@ -22,7 +22,9 @@ export class LayoutComponent {
   }
  
   ngOnInit() {
-    
+    this.layoutService.getLayout(LayoutTemplates.Sidebar).subscribe(res => {
+      this.layout = res;  
+    });
   };
 
   onLayoutChange($event: PageLayout) {
