@@ -35,3 +35,7 @@ interface ILayoutService{
 * hookup angular with web api
  - install swagger
 
+### 07/05/2019
+ * added PageLayout model in angular
+ * added PageComponentModel in c# , need to rename c# to match angular
+ * added generic apiService in angular
