@@ -44,7 +44,7 @@ interface ILayoutService{
 
 ### 10/05/2019
 
-
+* remove double click functionality from nav-items - for non-dropdowns.
 * create sidebar toggle functionality with icons showing e.g: https://wrapbootstrap.com/theme/nifty-light-dark-admin-template-WB0048JF7
 * create switchable theme method (possibly injecting/ejecting script tags in index.html)
 * create form generator (form to enable users to create forms) - can save them to local storage (mimic DB) for a component to pull them out and display them as real forms (CMS feature) (to be seperate module / pluggable)
