@@ -2,9 +2,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { Route } from '@angular/compiler/src/core';
 
 // models
-import { PageLayout } from '../models/layout.model';
+import { PageLayout } from '../../models/layout.model';
 // service
-import { LayoutService } from '../layout.service';
+import { LayoutService } from '../../layout.service';
 import { Observable } from 'rxjs';
 
 

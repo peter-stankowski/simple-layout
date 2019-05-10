@@ -1,4 +1,4 @@
-<mat-menu #childMenu="matMenu" [overlapTrigger]="false">
+<mat-menu #childMenu="matMenu" [overlapTrigger]="true">
   <span *ngFor="let child of items">
     <span *ngIf="child.navItems && child.navItems.length > 0">
       <button mat-menu-item color="primary" [matMenuTriggerFor]="menu.childMenu">

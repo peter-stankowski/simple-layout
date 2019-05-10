@@ -3,4 +3,5 @@ export class NavItem {
   DisplayName: string;
   IconName: string;
   NavItems: NavItem[];
+  Path: string;
 }

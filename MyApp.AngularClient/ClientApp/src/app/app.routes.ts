@@ -1,6 +1,7 @@
 import { Routes, Route } from "@angular/router";
 
 import { HomeComponent } from './home/home.component';
+import { FormsComponent } from './forms/forms.component';
 
 export const appRoutes: Routes = [
   {
@@ -63,8 +64,16 @@ export const appRoutes: Routes = [
       }
     ]
   },
+  {
+    path: 'forms',
+    component: FormsComponent,
+    data: {
+      displayText: 'Forms'
+    }
+  }
 ];
 
+//no longer used, driven by API
 export const appNav: any = [
   {
     path: '',

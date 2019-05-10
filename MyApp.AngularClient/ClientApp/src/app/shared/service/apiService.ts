@@ -14,7 +14,7 @@ export class ApiService{
 
   }
 
-  get(controller: string, action: string, parameters: HttpParams): Observable<any> {
+  get(controller: string, action: string, parameters: any): Observable<any> {
     var options = {
       headers: new HttpHeaders({}),
       params: parameters
