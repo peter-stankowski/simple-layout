@@ -39,3 +39,5 @@ interface ILayoutService{
  * added PageLayout model in angular
  * added PageComponentModel in c# , need to rename c# to match angular
  * added generic apiService in angular
+ 
+ http://wrapbootstrap.com/preview/WB0048JF7
