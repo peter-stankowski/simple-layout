@@ -22,7 +22,7 @@ export class SidebarComponent {
   }
 
   toggleSidenav(e: any, sidenav: any) {
-    
+    sidenav.toggle();
   }
 
 }
