@@ -43,9 +43,15 @@ interface ILayoutService{
  http://wrapbootstrap.com/preview/WB0048JF7
 
 ### 10/05/2019
+* create sidebar toggle functionality with icons showing e.g: https://wrapbootstrap.com/theme/nifty-light-dark-admin-template-WB0048JF7
+``` 
+Doesn't look like there's a native way to handle this yet.. https://github.com/angular/components/issues/1728
+Would this be a CSS hack job?
+```
+
 
 * remove double click functionality from nav-items - for non-dropdowns.
-* create sidebar toggle functionality with icons showing e.g: https://wrapbootstrap.com/theme/nifty-light-dark-admin-template-WB0048JF7
+
 * create switchable theme method (possibly injecting/ejecting script tags in index.html)
 * create form generator (form to enable users to create forms) - can save them to local storage (mimic DB) for a component to pull them out and display them as real forms (CMS feature) (to be seperate module / pluggable)
 * set up simple routes - to be used going forward (need to research best method of NG routing)
