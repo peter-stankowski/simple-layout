@@ -18,6 +18,8 @@ namespace MyApp.Model.Layout
         public int NavItemID { get; set; }
         public string DisplayName { get; set; }
         public string IconName { get; set; }
+        public string Path { get; set; }
+
 
         public List<NavItemViewModel> NavItems { get; set; }
 
@@ -25,9 +27,9 @@ namespace MyApp.Model.Layout
         {
             NavItems = new List<NavItemViewModel>()
             {
-                new NavItemViewModel(){ NavItemID = 1, DisplayName="Home", IconName = "home"},
-                new NavItemViewModel(){ NavItemID = 2, DisplayName="About", IconName = "face"},
-                new NavItemViewModel(){ NavItemID = 3, DisplayName="Contact", IconName = "gavel"},
+                new NavItemViewModel(){ NavItemID = 1, DisplayName="Home", IconName = "home", Path=""},
+                new NavItemViewModel(){ NavItemID = 2, DisplayName="About", IconName = "face", Path="about"},
+                new NavItemViewModel(){ NavItemID = 3, DisplayName="Forms", IconName = "gavel", Path="forms"},
                 new NavItemViewModel(){ NavItemID = 4, DisplayName="Settings", IconName = "settings_input_composite",
                  NavItems = new List<NavItemViewModel>(){
                     new NavItemViewModel(){ NavItemID = 41, DisplayName="Setting 1", IconName = "settings" },

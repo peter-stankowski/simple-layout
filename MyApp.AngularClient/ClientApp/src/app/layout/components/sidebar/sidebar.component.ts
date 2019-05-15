@@ -18,12 +18,11 @@ export class SidebarComponent {
   }
 
   ngOnInit() {
-    console.log(this.items);
+    
   }
 
   toggleSidenav(e: any, sidenav: any) {
-    var t = sidenav.toggle();
-    console.log(t);
+    sidenav.toggle();
   }
 
 }

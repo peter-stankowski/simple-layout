@@ -22,7 +22,7 @@ export class LayoutService {
   }
 
   getLayout = (id) => {
-    var data = this._apiService.get("Layout", "GetLayout", { layoutTemplate: id});
+    var data = this._apiService.get("Layout", "GetLayout", { layoutTemplate: id });
 
     return data;
   }
