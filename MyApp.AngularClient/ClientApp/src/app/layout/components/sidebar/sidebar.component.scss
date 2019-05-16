@@ -1,1 +1,41 @@
-﻿
+
+// remove item padding, for mini sidenav
+// https://stackoverflow.com/questions/48939324/remove-padding-from-mat-list-item
+:host /deep/ .mat-list-item-content {
+  padding: 0 8px !important;
+}
+
+// sidenav header
+.layout-sidebar .sidenav-header {
+  display: block;
+  width: auto;
+  min-height: 60px;
+  margin: 15px;
+  border: solid 1px red;
+}
+
+// closed / open states
+.layout-sidebar .closed .sidebar-displayname {
+  display: none;
+}
+.layout-sidebar .closed .mat-icon {
+  margin-right: 0px;
+}
+
+.layout-sidebar .opened .sidebar-displayname {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    display: none;
+  }
+
+  to {
+    opacity: 1;
+    display: inline-block;
+  }
+}
+
+
