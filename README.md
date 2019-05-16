@@ -41,9 +41,7 @@ interface ILayoutService{
  * added generic apiService in angular
  
 ### 16/05/2019
-```
-Added mini icons for collapsed sidenav menu.
-```
+ * added mini icons for collapsed sidenav menu.
 
 
 ### 10/05/2019
