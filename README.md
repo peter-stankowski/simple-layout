@@ -40,9 +40,6 @@ interface ILayoutService{
  * added PageComponentModel in c# , need to rename c# to match angular
  * added generic apiService in angular
  
-### 16/05/2019
- * added mini icons for collapsed sidenav menu.
-
 
 ### 10/05/2019
 * create sidebar toggle functionality with icons showing e.g: https://wrapbootstrap.com/theme/nifty-light-dark-admin-template-WB0048JF7
@@ -67,6 +64,11 @@ Learn folder structure, routing, standard design pattern
 
 * Branch from master and extend API
 Create new models and services 
+
+### 16/05/2019
+ * added mini icons for collapsed sidenav menu.
+ * fixed double click issue for non-dropdowns
+ * updated menu items display styles
 
 
 
