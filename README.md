@@ -40,7 +40,11 @@ interface ILayoutService{
  * added PageComponentModel in c# , need to rename c# to match angular
  * added generic apiService in angular
  
- http://wrapbootstrap.com/preview/WB0048JF7
+### 16/05/2019
+```
+Added mini icons for collapsed sidenav menu.
+```
+
 
 ### 10/05/2019
 * create sidebar toggle functionality with icons showing e.g: https://wrapbootstrap.com/theme/nifty-light-dark-admin-template-WB0048JF7
@@ -48,6 +52,7 @@ interface ILayoutService{
 Doesn't look like there's a native way to handle this yet with material.. https://github.com/angular/components/issues/1728
 Would this be a CSS hack job?
 ```
+
 
 
 * remove double click functionality from nav-items - for non-dropdowns.
