@@ -22,7 +22,8 @@
  
 
 ### 10/05/2019
-* create sidebar toggle functionality with icons showing e.g: https://wrapbootstrap.com/theme/nifty-light-dark-admin-template-WB0048JF7
+* ~~create sidebar toggle functionality with icons showing e.g:~~ 
+https://wrapbootstrap.com/theme/nifty-light-dark-admin-template-WB0048JF7
 ``` 
 Doesn't look like there's a native way to handle this yet with material.. https://github.com/angular/components/issues/1728
 Would this be a CSS hack job?
