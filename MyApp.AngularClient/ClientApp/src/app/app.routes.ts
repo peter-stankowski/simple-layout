@@ -2,11 +2,12 @@ import { Routes, Route } from "@angular/router";
 
 import { HomeComponent } from './home/home.component';
 import { FormsComponent } from './forms/forms.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 export const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: DashboardComponent,
     data: {
       displayText: 'Home'
     }

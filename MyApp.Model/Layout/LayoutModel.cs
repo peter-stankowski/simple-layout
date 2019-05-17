@@ -29,6 +29,7 @@ namespace MyApp.Model.Layout
         public LayoutThemes LayoutTheme { get; set; }
        
         public List<NavItemViewModel> NavItems { get; set; }
+        public List<NavItemGroupViewModel> NavItemGroups { get; set; }
     }
 
 }

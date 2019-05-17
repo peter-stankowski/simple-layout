@@ -21,6 +21,9 @@
 .layout-sidebar .closed .mat-icon {
   margin-right: 0px;
 }
+.layout-sidebar .closed .group-header-title {
+  display: none;
+}
 
 .layout-sidebar .opened .sidebar-displayname {
   animation: fadeIn 2s;
@@ -34,8 +37,27 @@
 
   to {
     opacity: 1;
-    display: inline-block;
+    display: block;
   }
+}
+
+// mat-toolbar
+.mat-toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+// group header
+
+.nav-list-group {
+  padding: 7px;
+  margin-bottom: 5px;
+}
+.group-header .group-header-title {
+  font-size: 16px;
+}
+.group-header hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 

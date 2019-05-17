@@ -5,7 +5,7 @@
 <app-layout-config (layoutChange)="onLayoutChange($event)"></app-layout-config>
 
 <layout-topbar *ngIf="layout.layoutTemplate == layoutTemplates.Topbar" [items]="layout.navItems"></layout-topbar>
-<layout-sidebar *ngIf="layout.layoutTemplate == layoutTemplates.Sidebar" [items]="layout.navItems"></layout-sidebar>
+<layout-sidebar *ngIf="layout.layoutTemplate == layoutTemplates.Sidebar" [items]="layout.navItems" [navItemGroups]="layout.navItemGroups"></layout-sidebar>
 
 
 <p>Nav layout from api: {{layout | json}}</p>

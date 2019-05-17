@@ -10,6 +10,7 @@ import { Component, NgModule, Input } from '@angular/core';
 /** sidebar component*/
 export class SidebarComponent {
   @Input() items: any[];
+  @Input() navItemGroups: any[];
 
   viewState: string = 'closed';
   showFiller: boolean = false;

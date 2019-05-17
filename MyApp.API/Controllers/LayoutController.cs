@@ -72,16 +72,16 @@ namespace MyApp.API.Controllers
             return Ok(service.GetLayouts());
         }
 
-        /// <summary>
-        /// Navitems, to be removed and fetched from LayoutComponentViewModel
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet]
-        [Route("GetNavItems")]
-        public ActionResult<NavItemViewModel> GetNavItems()
-        {
-            return Ok(service.GetNavItems());
-        }
+        ///// <summary>
+        ///// Navitems, to be removed and fetched from LayoutComponentViewModel
+        ///// </summary>
+        ///// <returns></returns>
+        //[HttpGet]
+        //[Route("GetNavItems")]
+        //public ActionResult<NavItemViewModel> GetNavItems()
+        //{
+        //    return Ok(service.GetNavItems());
+        //}
 
     }
 }
