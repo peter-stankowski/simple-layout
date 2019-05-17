@@ -70,7 +70,7 @@ Create new models and services
  * fixed double click issue for non-dropdowns
  * updated menu items display styles
 
-### 16/05/2019
+### 17/05/2019
  * added navItemGroup model - replacing navItems with navItemGroups (nav with headers)
  * added dashboard module
  * need to look into flex grid
