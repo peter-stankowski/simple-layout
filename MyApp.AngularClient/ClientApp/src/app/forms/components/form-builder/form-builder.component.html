@@ -1,3 +1,46 @@
-<p>
-  form-builder works!
-</p>
+<h3>Form Builder</h3>
+<div class="container border">
+  <div class="p-3">
+    <p><b>Component Specification: </b></p>
+    <ul>
+      <li>Single FormGroup - this will contain multiple form controls as specified by the user</li>
+      <li>Select 'Create Form Control' to generate a control</li>
+      <li>Form Control must be populated to continue</li>
+    </ul>
+  </div>
+
+  <div class="border my-3 p-3">
+
+    <button class="btn btn-primary" type="button" (click)="createNewControl()">Create New Form Control</button>
+    
+    <hr />
+
+    <section *ngIf="newControl">
+      <p><b>Create a new Form Control</b></p>
+      <form formGroup="newControl">
+        <mat-form-field>
+          <input matInput formControl="label" placeholder="Label Name" />
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <mat-select placeholder="Type" formControl="type">
+            <mat-option value="1">Text</mat-option>
+            <mat-option value="2">Number</mat-option>
+            <mat-option value="3">Dropdown</mat-option>            
+          </mat-select>          
+        </mat-form-field>
+        <button class="btn btn-success float-right" type="button" (click)="saveNewControl(newControl)">Save New Form Control</button>
+      </form>
+      
+    </section>
+
+    <div class="my-3">
+      {{newForm | json}}
+    </div>
+
+  </div>
+
+</div>
+
+
+
