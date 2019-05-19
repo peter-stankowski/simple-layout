@@ -1,5 +1,4 @@
 import { Component, NgModule, Input } from '@angular/core';
-import { Route } from '@angular/compiler/src/core';
 
 
 @Component({
@@ -11,6 +10,10 @@ import { Route } from '@angular/compiler/src/core';
 /** sidebar component*/
 export class SidebarComponent {
   @Input() items: any[];
+  @Input() navItemGroups: any[];
+
+  viewState: string = 'closed';
+  showFiller: boolean = false;
 
   /** sidebar ctor */
   constructor() {
@@ -22,7 +25,8 @@ export class SidebarComponent {
   }
 
   toggleSidenav(e: any, sidenav: any) {
-    sidenav.toggle();
+    this.viewState = (this.viewState == 'closed') ? 'opened' : 'closed';
+
   }
 
 }

@@ -1,5 +1,5 @@
 
-import { NavItem } from "./navbar.model";
+import { NavItem, NavItemGroup } from "./navbar.model";
 
 export enum LayoutTemplates {
   Topbar = 0,
@@ -18,6 +18,8 @@ export class PageLayout {
 
   LayoutTemplate: LayoutTemplates;
   LayoutTheme: LayoutThemes;
+
   NavItems: NavItem[];
+  NavItemGroups: NavItemGroup[];
 
 }

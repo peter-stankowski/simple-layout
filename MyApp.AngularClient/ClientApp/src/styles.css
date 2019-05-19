@@ -2,22 +2,4 @@
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
 
 
-.layout-sidebar .mat-drawer-container {
-  height: 100vh;
-}
-.layout-sidebar .layout-sidebar-header {
-  position: fixed;
-  display: block;
-  width: auto;
-  border: solid 1px red;
-}
-.layout-sidebar .layout-sidebar-content {
-  padding-top: 50px;
-}
-.layout-sidebar .mat-sidenav {
-  width: 260px;
-}
 
-.layout-sidebar .btn-toggle {
-  position: fixed;
-}

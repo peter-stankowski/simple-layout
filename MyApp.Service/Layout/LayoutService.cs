@@ -13,10 +13,13 @@ namespace MyApp.Service.Layout
             var model = new NavItemViewModel();
             model.Seed();
 
+            var newnav = new NavItemGroupViewModel().Seed();
+
+
             var list = new List<LayoutComponentViewModel>()
             {
-                new LayoutComponentViewModel() { LayoutComponentID = 1, LayoutTemplate = LayoutTemplates.Sidebar, LayoutTheme = LayoutThemes.Default, NavItems = model.NavItems },
-                new LayoutComponentViewModel() { LayoutComponentID = 2, LayoutTemplate = LayoutTemplates.Topbar, LayoutTheme = LayoutThemes.Default, NavItems = model.NavItems }
+                new LayoutComponentViewModel() { LayoutComponentID = 1, LayoutTemplate = LayoutTemplates.Sidebar, LayoutTheme = LayoutThemes.Default, NavItems = model.NavItems, NavItemGroups = newnav },
+                new LayoutComponentViewModel() { LayoutComponentID = 2, LayoutTemplate = LayoutTemplates.Topbar, LayoutTheme = LayoutThemes.Default, NavItems = model.NavItems, NavItemGroups = newnav }
             };
 
             return list;

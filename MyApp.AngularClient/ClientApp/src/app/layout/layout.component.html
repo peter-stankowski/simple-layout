@@ -1,14 +1,12 @@
-
 <!--<button *ngFor="let layout of layouts" (click)="onToggleLayout(layout)">
   Template {{layout.layoutTemplate}}
 </button>
 {{layout.layoutTemplate}}-->
 <app-layout-config (layoutChange)="onLayoutChange($event)"></app-layout-config>
 
-<div class='container-fluid'>
-  <layout-topbar *ngIf="layout.layoutTemplate == layoutTemplates.Topbar" [items]="layout.navItems"></layout-topbar>
-  <layout-sidebar *ngIf="layout.layoutTemplate == layoutTemplates.Sidebar" [items]="layout.navItems"></layout-sidebar>
-</div>
+<layout-topbar *ngIf="layout.layoutTemplate == layoutTemplates.Topbar" [items]="layout.navItems"></layout-topbar>
+<layout-sidebar *ngIf="layout.layoutTemplate == layoutTemplates.Sidebar" [items]="layout.navItems" [navItemGroups]="layout.navItemGroups"></layout-sidebar>
+
 
 <p>Nav layout from api: {{layout | json}}</p>
 

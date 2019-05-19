@@ -12,13 +12,20 @@ import { TopbarComponent } from './components/topbar/topbar.component';
 import { NavbarItemComponent } from './shared/navbar-item.component';
 import { ConfigComponent } from './components/config/config.component';
 
+// modules
+import { DashboardModules } from '../dashboard/dashboard.module';
+
+
+
 @NgModule({
   imports: [
     CommonModule,
     MaterialModules,
     RouterModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+
+    DashboardModules
   ],
   declarations: [
     LayoutComponent,
