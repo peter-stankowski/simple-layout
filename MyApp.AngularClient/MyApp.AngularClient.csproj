@@ -37,6 +37,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\src\app\invoices\models\" />
+    <Folder Include="ClientApp\src\app\invoices\shared\" />
     <Folder Include="ClientApp\src\app\service\" />
   </ItemGroup>
 

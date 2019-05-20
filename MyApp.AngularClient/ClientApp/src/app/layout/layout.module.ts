@@ -14,7 +14,7 @@ import { ConfigComponent } from './components/config/config.component';
 
 // modules
 import { DashboardModules } from '../dashboard/dashboard.module';
-
+import { InvoiceModule } from "../invoices/invoice.module";
 
 
 @NgModule({
@@ -25,7 +25,8 @@ import { DashboardModules } from '../dashboard/dashboard.module';
     HttpClientModule,
     FormsModule,
 
-    DashboardModules
+    DashboardModules,
+    InvoiceModule
   ],
   declarations: [
     LayoutComponent,
@@ -33,7 +34,7 @@ import { DashboardModules } from '../dashboard/dashboard.module';
     TopbarComponent,
     HomeComponent,
     NavbarItemComponent,
-    ConfigComponent    
+    ConfigComponent
   ],
   exports: [
     RouterModule,
