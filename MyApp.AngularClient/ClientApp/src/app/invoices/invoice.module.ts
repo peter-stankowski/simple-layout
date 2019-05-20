@@ -7,6 +7,7 @@ import { MaterialModules } from '../shared/modules/material.module';
 
 // components
 import { InvoiceComponent } from "./invoice.component";
+import { InvoiceDashboardComponent } from "./components/invoice-dashboard/invoice-dashboard.component";
 import { InvoiceEditComponent } from "./components/invoice-edit/invoice-edit.component";
 import { InvoiceListComponent } from "./components/invoice-list/invoice-list.component";
 import { ContextMenuComponent } from "../shared/components/context-menu/context-menu.component";
@@ -26,6 +27,7 @@ import { FullWidthDirective } from "../shared/directives/full-width.directive";
   ],
   declarations: [
     InvoiceComponent,
+    InvoiceDashboardComponent,
     InvoiceEditComponent,
     InvoiceListComponent,
     FullWidthDirective,

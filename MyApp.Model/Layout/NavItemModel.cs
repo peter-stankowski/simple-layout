@@ -39,8 +39,14 @@ namespace MyApp.Model.Layout
                     IconName = "",
                     NavItems = new List<NavItemViewModel>()
                     {
-                        new NavItemViewModel(){ NavItemID = 1, DisplayName="Dashboard", IconName = "home", Path=""},
-                        new NavItemViewModel(){ NavItemID = 2, DisplayName="Invoices", IconName = "face", Path=""},
+                        new NavItemViewModel(){ NavItemID = 1, DisplayName="Dashboard", IconName = "home", Path="invoices/dashboard"},
+                        new NavItemViewModel(){ NavItemID = 2, DisplayName="Invoices", IconName = "face", Path="",
+                        NavItems = new List<NavItemViewModel>()
+                        {
+                            new NavItemViewModel() { DisplayName = "Add New", Path = "invoices/create"},
+                            new NavItemViewModel()  { DisplayName = "View All", Path="invoices/list"}
+                        }
+                        },
                         new NavItemViewModel(){ NavItemID = 3, DisplayName="Customers", IconName = "gavel", Path=""},
                     }
                 },
